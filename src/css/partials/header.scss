@@ -75,21 +75,20 @@ header#header-container {
 		background-position: right center;
 		background-size: cover;
 		filter: grayscale(40%);
-		z-index: 1
+		z-index: 1;
 	}
 }
 
 .slide-in {
-	opacity: 0;
 	z-index: -1;
-	transition: 0.55s ease;
-}
-
-.align-bottom.slide-in {
+	transition: 0.45s ease;
 	transform:translateX(100%);
 }
 
+.hiden {
+	visibility: hidden;
+}
+
 .slide-in.active {
-	opacity: 1;
 	transform: translateX(0%);
  }

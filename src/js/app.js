@@ -1,22 +1,22 @@
 const css = require('../css/app.scss');
 
+// header left view btn
 const btnView = document.getElementById('btn-view');
+
+// get header shoe img
+const headerViewShoe = document.getElementById('header-view-shoe');
+
+// get view shoe blose btn
 const btnViewClose = document.getElementsByClassName('closebtn')[0]
 
-
-function showShoe() {
-	let hidenShoe = document.getElementsByClassName('slide-in')[0];
-	hidenShoe.classList.add('active');
-}
-
-function hideShoe() {
-	let shownShoe = document.getElementsByClassName('active')[0];
-	shownShoe.classList.remove('active');
-}
-
-
 // header view btn click function to show Shoe
-btnView.addEventListener('click', showShoe);
+btnView.addEventListener('click', () => {
+	headerViewShoe.classList.remove('hiden');
+	headerViewShoe.classList.add('active');
+});
 
-// header close btn click function to close Shoe
-btnViewClose.addEventListener('click', hideShoe);
+// header close btn click function to hide Shoe
+btnViewClose.addEventListener('click', () => {
+	headerViewShoe.classList.remove('active');
+	headerViewShoe.classList.add('hiden');
+});
