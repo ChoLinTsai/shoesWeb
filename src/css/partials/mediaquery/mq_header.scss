@@ -1,0 +1,48 @@
+/* for ipad pro */
+$ipadProMinHeight: 450px;
+@media screen and (max-width: 1366px) and (min-width: 1025px) {
+	header#header-container {
+		min-width: 100%;
+		min-height: $ipadProMinHeight;
+		section#header-left {
+			min-width: 50%;
+			min-height: $ipadProMinHeight;
+			justify-content: space-around;
+			img#header-shoe {
+				width: 250px;
+				height: 250px;
+			}
+			div#header-view-shoe {
+				min-width: 50%;
+				min-height: $ipadProMinHeight;
+			}
+			p {
+				padding: 0 50px;
+			}
+		}
+		section#header-right {
+			min-width: 50%;
+		}
+	}
+}
+
+/* for ipad */
+@media screen and (max-width: 1024px){
+	header#header-container {
+		min-width: 100%;
+		section#header-left {
+			min-width: 50%;
+			div#header-view-shoe {
+				min-width: 50%;
+			}
+		}
+		section#header-right {
+			min-width: 50%;
+		}
+	}
+}
+
+/* for mobile devices */
+@media screen and (max-width: 680px) {
+
+}

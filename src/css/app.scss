@@ -1,12 +1,18 @@
+/* import global and custom css */
 @import '../bootstrap/customizations.scss';
-
-
 @import "./partials/global.scss";
-@import "./partials/master.scss";
 @import "./partials/resources/fonts.scss";
 
-/* header style*/
+
+
+/* import master section css*/
+@import "./partials/master.scss";
+@import "./partials/mediaquery/mq_master.scss";
+
+
+/* import header section css */
 @import "./partials/header.scss";
+@import "./partials/mediaquery/mq_header.scss";
 
 /* main tag style */
 @import "./partials/main.scss";
