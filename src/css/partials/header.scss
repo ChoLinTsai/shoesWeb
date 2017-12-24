@@ -1,5 +1,5 @@
 header#header-container {
-	width: 100%;
+	min-width: 100%;
 	height: 400px;
 	position: relative;
 	display: grid;
@@ -30,7 +30,7 @@ header#header-container {
 			position: relative;
 		}
 		div#header-view-shoe {
-			min-width: 50%;
+			min-width: 450px;
 			min-height: 400px;
 			position: absolute;
 			top: 0;
@@ -83,7 +83,7 @@ header#header-container {
 .slide-in {
 	z-index: -1;
 	transition: 0.45s ease;
-	transform:translateX(100%);
+	transform:translateX(85%);
 }
 
 .hiden {

@@ -1,5 +1,6 @@
 /* for ipad pro */
 $ipadProMinHeight: 450px;
+
 @media screen and (max-width: 1366px) and (min-width: 1025px) {
 	header#header-container {
 		min-width: 100%;
@@ -44,5 +45,46 @@ $ipadProMinHeight: 450px;
 
 /* for mobile devices */
 @media screen and (max-width: 680px) {
+	header#header-container {
+		@include bdr(3px, red);
+		min-width: 100%;
+		height: 800px;
+		display: flex;
+		flex-direction: column;
+		section#header-left {
+			order: 2;
+			@include wh(min, 100%, 400px);
+			justify-content: space-around;
+			div#header-view-shoe {
+				@include wh(normal, 100%, 400px);
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-image: url('../img/header-shoe.jpg');
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				z-index: 1;
+			}
 
+		}
+		section#header-right {
+			@include wh(min, 100%, 400px);
+			order: 1;
+		}
+	}
+
+	.slide-in {
+		z-index: -1;
+		transition: 0.45s ease;
+		transform:translateX(0%);
+	}
+
+	.hiden {
+		visibility: hidden;
+	}
+
+	.slide-in.active {
+		transform: translateY(100%);
+	 }
 }

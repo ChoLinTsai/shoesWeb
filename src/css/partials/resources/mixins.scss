@@ -1,0 +1,16 @@
+@mixin wh($check, $width, $height) {
+	@if $check == "max" {
+		max-width: $width;
+		max-height: $height;
+	} @else if $check == "min" {
+		min-width: $width;
+		min-height: $height;
+	} @else if $check == "normal"{
+		width: $width;
+		height: $height;
+	}
+}
+
+@mixin bdr($line, $color) {
+	border: $line solid $color;
+}

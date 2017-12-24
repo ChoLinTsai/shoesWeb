@@ -14,5 +14,12 @@
 @import "./partials/header.scss";
 @import "./partials/mediaquery/mq_header.scss";
 
-/* main tag style */
+/* import main section css */
 @import "./partials/main.scss";
+
+
+div#placeHolder {
+	width: 100px;
+	height: 5000px;
+	border: 2px solid black;
+}
