@@ -7,8 +7,11 @@
 	<title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
+	<!-- master container for wrapping all tags -->
 	<div id="master-container">
+		<!-- header container for wrapping head sections  -->
 		<header id="header-container">
+				<!-- header left section -->
 				<section id="header-left">
 						<img id="header-shoe" src="../img/header-shoe.jpg">
 						<div id="header-view-shoe" class="hiden slide-in">
@@ -18,25 +21,29 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil tempora aspernatur nobis natus, ipsa repellat.</p>
 						<a id="btn-view">View</a>
 				</section>
-			<section id="header-right">
-			</section>
+				<!-- header right section -->
+				<section id="header-right"></section>
 		</header>
+
+		<!-- main container for wrapping main sections  -->
 		<main id="main-container">
-			<section id="section-left">
-				<div id="section-left-pic"></div>
-			</section>
-			<section id="section-right">
-				<div id="section-right-content">
-					<h1>Future Classic</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam dignissimos nisi maxime, autem quidem recusandae repellendus perferendis, distinctio ipsam consectetur?</p>
-					<a href="#">Buy Now</a>
+			<!-- main left section -->
+			<section id="main-left">
+				<div id="main-left-pics-container">
+					<img src="./img/main-shoes.png" class="main-shoes-1" >
 				</div>
 			</section>
+
+			<!-- main right section -->
+			<section id="main-right">
+				<div id="main-right-content">
+					<h1>Future Classic</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam dignissimos nisi maxime, autem quidem recusandae repellendus perferendis, distinctio ipsam consectetur?</p>
+					<a>Buy Now</a>
+				</div>
+			</section>
+
 		</main>
-
-		<!-- <div id="placeHolder">
-
-		</div> -->
 	</div>
 </body>
 </html>

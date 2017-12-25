@@ -11,7 +11,7 @@ header#header-container {
 		background-image: url('../img/header-model.jpg');
 		background-position: right center;
 		background-size: cover;
-		filter: grayscale(40%);
+		filter: grayscale(30%);
 		z-index: 1;
 	}
 	section#header-left {
@@ -53,6 +53,7 @@ header#header-container {
 			}
 		}
 		h1 {
+			font-size: 4.5rem;
 			margin-top: 0;
 			color: #5C636E;
 			font-family: 'roboto-black';
@@ -63,7 +64,8 @@ header#header-container {
 			font-family: 'roboto-medium';
 			padding: 10px 0;
 		}
-		a {
+		a#btn-view {
+			cursor: pointer;
 			text-align: center;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -83,7 +85,7 @@ header#header-container {
 .slide-in {
 	z-index: -1;
 	transition: 0.45s ease;
-	transform:translateX(85%);
+	transform:translateX(100%);
 }
 
 .hiden {

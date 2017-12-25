@@ -3,8 +3,6 @@
 @import "./partials/global.scss";
 @import "./partials/resources/fonts.scss";
 
-
-
 /* import master section css*/
 @import "./partials/master.scss";
 @import "./partials/mediaquery/mq_master.scss";
@@ -14,12 +12,5 @@
 @import "./partials/header.scss";
 @import "./partials/mediaquery/mq_header.scss";
 
-/* import main section css */
+/* import main section style */
 @import "./partials/main.scss";
-
-
-div#placeHolder {
-	width: 100px;
-	height: 5000px;
-	border: 2px solid black;
-}

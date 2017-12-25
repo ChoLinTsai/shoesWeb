@@ -1,11 +1,11 @@
-@mixin wh($check, $width, $height) {
-	@if $check == "max" {
+@mixin wh($type, $width, $height) {
+	@if $type == "max" {
 		max-width: $width;
 		max-height: $height;
-	} @else if $check == "min" {
+	} @else if $type == "min" {
 		min-width: $width;
 		min-height: $height;
-	} @else if $check == "normal"{
+	} @else if $type == "normal"{
 		width: $width;
 		height: $height;
 	}
