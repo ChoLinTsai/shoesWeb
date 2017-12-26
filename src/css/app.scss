@@ -14,3 +14,7 @@
 
 /* import main section style */
 @import "./partials/main.scss";
+@import "./partials/mediaquery/mq_main.scss";
+
+/* import aside section style */
+@import "./partials/aside.scss";

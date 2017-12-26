@@ -46,7 +46,6 @@ $ipadProMinHeight: 450px;
 /* for mobile devices */
 @media screen and (max-width: 680px) {
 	header#header-container {
-		@include bdr(3px, red);
 		min-width: 100%;
 		height: 800px;
 		display: flex;
@@ -66,7 +65,10 @@ $ipadProMinHeight: 450px;
 				background-size: cover;
 				z-index: 1;
 			}
-
+			a#btn-view {
+				width: 250px;
+				padding: 5px;
+			}
 		}
 		section#header-right {
 			@include wh(min, 100%, 400px);

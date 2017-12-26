@@ -1,6 +1,6 @@
 main#main-container {
 	min-width: 100%;
-	max-height: 800px;
+	max-height: 400px;
 	position: relative;
 	display: grid;
 	/*
@@ -13,22 +13,22 @@ main#main-container {
 		@include wh(max, 100%, 100%);
 		grid-column: [main-left-1] / [main-right-3];
 		div#main-left-pics-container {
-			@include wh(max, 100%, 100%);
-			img.main-shoes-1 {
-				@include wh(max, 100%, 100%);
-			}
+			@include wh(min, 540px, 360px);
+			background-image: url('../img/main-shoe.jpg');
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
 		}
 	}
 
 	section#main-right {
-		@include wh(max, 100%, 400px);
-		grid-column: main-right-3 / main-right-1;
+		@include wh(min, 100%, 360px);
+		grid-column: [main-right-3] / [main-right-1];
 		background: #f5f5f5;
-		@include wh(max, 100%, 100%);
 		div#main-right-content {
 			@include wh(max, 100%, 100%);
 			position: relative;
-			padding-left: 1rem;
+			padding: 0 1rem;
 			h1 {
 				margin: 0;
 				position: relative;
@@ -39,23 +39,22 @@ main#main-container {
 			}
 			p {
 				position: relative;
-				padding: 50px 0;
-				padding-right: 1rem;
+				padding: 40px 0;
 				line-height: 1.5;
 				font-size: 1.5rem;
 				color: #5C636E;
 				font-family: 'roboto-medium';
 			}
 			a {
-				position: relative;
 				cursor: pointer;
+				position: relative;
 				text-align: center;
 				text-decoration: none;
 				text-transform: uppercase;
 				font-size: 2rem;
 				border: 2px solid #393E46;
 				color: #393E46;
-				width: 150px;
+				width: 250px;
 				padding: 5px;
 				font-family: 'roboto-medium';
 				&:hover {
