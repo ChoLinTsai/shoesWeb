@@ -1,0 +1,112 @@
+/* for ipad pro */
+@media screen and (max-width: 1366px) and (min-width: 1025px) {
+	main#main-container {
+		min-width: 100%;
+		max-height: 450px;
+		position: relative;
+		display: grid;
+		grid-template-columns:
+			[main-left-1] 1fr [main-center] 1fr [main-right-1];
+		section#main-left {
+			@include wh(max, 100%, 100%);
+			grid-column: [main-left-1] / [main-center];
+			div#main-left-pics-container {
+				@include wh(min, 100%, 400px);
+			}
+		}
+
+		section#main-right {
+			@include wh(max, 100%, 100%);
+			grid-column: [main-center] / [main-left];
+			div#main-right-content {
+				@include wh(max, 100%, 100%);
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				p {
+					padding: 50px 50px;
+				}
+			}
+		}
+	}
+}
+
+/* for ipad */
+@media screen and (max-width: 880px) {
+	main#main-container {
+		min-width: 100%;
+		max-height: 300px;
+		position: relative;
+		display: grid;
+		grid-template-columns:
+			[main-left-1] 3fr [main-center] 2fr [main-right-1];
+		section#main-left {
+			@include wh(max, 100%, 100%);
+			grid-column: [main-left-1] / [main-center];
+			div#main-left-pics-container {
+				@include wh(min, 100%, 300px);
+			}
+		}
+		section#main-right {
+			@include wh(min, 100%, 300px);
+			grid-column: [main-center] / [main-right-1];
+			div#main-right-content {
+				@include wh(min, 100%, 300px);
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				h1 {
+					padding-top: 1rem;
+					font-size: 4rem;
+				}
+				p {
+					padding: 20px;
+					line-height: 1.5;
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}
+
+/* for mobile devices */
+@media screen and (max-width: 500px) {
+	main#main-container {
+		min-width: 100%;
+		min-height: 550px;
+		display: flex;
+		flex-direction: column;
+		section#main-left {
+			@include wh(max, 100%, 100%);
+			div#main-left-pics-container {
+				@include wh(min, 100%, 250px);
+			}
+		}
+		section#main-right {
+			@include wh(max, 100%, 100%);
+			div#main-right-content {
+				background: #333;
+				@include wh(min, 100%, 300px);
+				padding: 0;
+				h1 {
+					color: #FAFAFA;
+				}
+				p {
+					color: #FAFAFA;
+				}
+				a {
+					color: #FAFAFA;
+					border: 2px solid #FAFAFA;
+					&:hover {
+						background: #FAFAFA;
+						color: #333;
+					}
+				}
+			}
+		}
+	}
+}

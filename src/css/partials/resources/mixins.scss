@@ -1,0 +1,22 @@
+@mixin wh($type, $width, $height) {
+	@if $type == "max" {
+		max-width: $width;
+		max-height: $height;
+	} @else if $type == "min" {
+		min-width: $width;
+		min-height: $height;
+	} @else if $type == "normal"{
+		width: $width;
+		height: $height;
+	}
+}
+
+@mixin bdr($line, $color) {
+	border: $line solid $color;
+}
+
+
+@mixin gridColRow($colStart, $colEnd, $rowStart, $rowEnd) {
+	grid-column: [col-$colStart] / [col-$colEnd];
+	grid-row: [row-$rowStart] / [row-$rowEnd];
+}

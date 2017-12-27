@@ -1,9 +1,24 @@
+/* import global and custom css */
 @import '../bootstrap/customizations.scss';
-
-
 @import "./partials/global.scss";
-@import "./partials/master.scss";
 @import "./partials/resources/fonts.scss";
 
-/* header style*/
+/* import master section css*/
+@import "./partials/master.scss";
+@import "./partials/mediaquery/mq_master.scss";
+
+
+/* import header section css */
 @import "./partials/header.scss";
+@import "./partials/mediaquery/mq_header.scss";
+
+/* import main section style */
+@import "./partials/main.scss";
+@import "./partials/mediaquery/mq_main.scss";
+
+/* import aside section style */
+@import "./partials/aside.scss";
+@import "./partials/mediaquery/mq_aside.scss";
+
+/* import article section style */
+@import "./partials/article.scss";

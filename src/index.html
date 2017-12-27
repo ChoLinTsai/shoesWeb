@@ -7,24 +7,59 @@
 	<title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
+	<!-- master container for wrapping all tags -->
 	<div id="master-container">
+		<!-- header container for wrapping head sections  -->
 		<header id="header-container">
+				<!-- header left section -->
 				<section id="header-left">
 						<img id="header-shoe" src="../img/header-shoe.jpg">
-						<div id="header-view-shoe" class="align-bottom slide-in">
-							<span class="closebtn" onclick="">&times;</span>
+						<div id="header-view-shoe" class="hiden slide-in">
+							<span class="closebtn">&times;</span>
 						</div>
 						<h1>Nike Running +</h1>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil tempora aspernatur nobis natus, ipsa repellat.</p>
-						<a id="btn-view" href="#">View</a>
+						<a id="btn-view">View</a>
 				</section>
-
-
-
-			<section id="header-right">
-
-			</section>
+				<!-- header right section -->
+				<section id="header-right"></section>
 		</header>
+
+		<!-- main container for wrapping main sections  -->
+		<main id="main-container">
+			<!-- main left section -->
+			<section id="main-left">
+				<div id="main-left-pics-container">
+				</div>
+			</section>
+
+			<!-- main right section -->
+			<section id="main-right">
+				<div id="main-right-content">
+					<h1>Future Classic</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam dignissimos nisi maxime, autem quidem recusandae repellendus perferendis, distinctio ipsam consectetur?</p>
+					<a>Buy Now</a>
+				</div>
+			</section>
+		</main>
+
+		<!-- aside container for wrapping aside section -->
+		<aside id="aside-container">
+			<div id="aside-pic-1"></div>
+			<div id="aside-pic-2"></div>
+			<div id="aside-pic-3"></div>
+			<div id="aside-pic-4"></div>
+		</aside>
+
+		<!-- article container for wrapping article section -->
+		<article id="article-container">
+				<div id="showcase-1"></div>
+				<div id="showcase-2"></div>
+				<div id="showcase-3"></div>
+				<div class="showcase-bg-box showcase-bg-box-1"></div>
+				<div class="showcase-bg-box showcase-bg-box-2"></div>
+				<div class="showcase-bg-box showcase-bg-box-3"></div>
+		</article>
 	</div>
 </body>
 </html>

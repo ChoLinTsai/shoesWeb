@@ -1,0 +1,68 @@
+main#main-container {
+	min-width: 100%;
+	max-height: 400px;
+	position: relative;
+	display: grid;
+	/*
+		5 cols with 6 lines. left 3 lines right 3 lines
+	*/
+	grid-template-columns:
+		[main-left-1] 1fr [main-left-2] 1fr [main-left-3] 1fr [main-right-3] 1fr [main-right-2] 1fr [main-right-1];
+
+	section#main-left {
+		@include wh(max, 100%, 100%);
+		grid-column: [main-left-1] / [main-right-3];
+		div#main-left-pics-container {
+			@include wh(min, 540px, 360px);
+			background-image: url('../img/main-shoe.jpg');
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+		}
+	}
+
+	section#main-right {
+		@include wh(min, 100%, 360px);
+		grid-column: [main-right-3] / [main-right-1];
+		background: #f5f5f5;
+		div#main-right-content {
+			@include wh(max, 100%, 100%);
+			position: relative;
+			padding: 0 1rem;
+			h1 {
+				margin: 0;
+				position: relative;
+				padding-top: 50px;
+				font-family: 'roboto-black';
+				font-size: 4.5rem;
+				color: #5C636E;
+			}
+			p {
+				position: relative;
+				padding: 40px 0;
+				line-height: 1.5;
+				font-size: 1.5rem;
+				color: #5C636E;
+				font-family: 'roboto-medium';
+			}
+			a {
+				cursor: pointer;
+				position: relative;
+				text-align: center;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-size: 2rem;
+				border: 2px solid #393E46;
+				color: #393E46;
+				width: 250px;
+				padding: 5px;
+				font-family: 'roboto-medium';
+				&:hover {
+					border: 2px solid #5C636E;
+					background: #5C636E;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
