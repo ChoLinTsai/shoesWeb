@@ -18,3 +18,7 @@
 
 /* import aside section style */
 @import "./partials/aside.scss";
+@import "./partials/mediaquery/mq_aside.scss";
+
+/* import article section style */
+@import "./partials/article.scss";

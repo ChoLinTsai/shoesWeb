@@ -89,8 +89,23 @@
 		section#main-right {
 			@include wh(max, 100%, 100%);
 			div#main-right-content {
+				background: #333;
 				@include wh(min, 100%, 300px);
 				padding: 0;
+				h1 {
+					color: #FAFAFA;
+				}
+				p {
+					color: #FAFAFA;
+				}
+				a {
+					color: #FAFAFA;
+					border: 2px solid #FAFAFA;
+					&:hover {
+						background: #FAFAFA;
+						color: #333;
+					}
+				}
 			}
 		}
 	}
