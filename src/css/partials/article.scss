@@ -6,51 +6,54 @@ article#article-container {
 	grid-template-columns: [col-1] 1rem [col-2] 1fr [col-3] 1fr [col-4] 1fr [col-5] 1fr [col-6] 1fr [col-7] 1fr [col-8] 1fr [col-9] 1fr [col-10] 1fr [col-11] 1rem [col-12];
 	grid-template-rows: [row-1] 3rem [row-2] 1fr [row-3] 1fr [row-4] 1fr [row-5] 1fr [row-6] 1fr [row-7] 1fr [row-8] 1fr [row-9] 1fr [row-10] 1fr [row-11] 1rem [row-12];
 	div#showcase-1 {
-		@include bdr(2px, red);
+		background-image: url('../img/article-model-1.jpg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
 		@include wh(normal, 180px, 275px);
-		grid-column: [col-6] / [col-8];
+		@include gridColRow(col-6, col-8, row-2,row-6);
 		/* autoprefixer: off */
-		grid-row: [row-2] / [row-6];
-		/* autoprefixer: off */
-		z-index: 2;
+		z-index: 1;
+		filter: grayscale(15%);
 	}
 	div#showcase-2 {
-		@include bdr(2px, black);
+		background-image: url('../img/article-model-2.jpg');
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: cover;
 		@include wh(normal, 350px, 175px);
-		grid-column: [col-3] / [col-7];
-		/* autoprefixer: off */
-		grid-row: [row-6] / [row-8];
+		@include gridColRow(col-3, col-7, row-6, row-8);
 		/* autoprefixer: off */
 		z-index: 1;
 	}
 	div#showcase-3 {
-		@include bdr(2px, blue);
+		background-image: url('../img/article-model-3.jpg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
 		@include wh(normal, 200px, 300px);
-		grid-column: [col-7] / [col-9];
-		grid-row: [row-6] / [row-10];
+		@include gridColRow(col-7, col-9, row-6, row-10);
 		/* autoprefixer: off */
 		z-index: 1;
+		filter: grayscale(15%);
 	}
 	div.showcase-bg-box {
-		background: #B9E1DC;
+		background: #A1D9FF;
 		z-index: 0;
 	}
 	div.showcase-bg-box-1 {
 		@include wh(normal, 150px, 150px);
-		grid-column: [col-5] / [col-7];
-		grid-row: [row-5] / [row-7];
+		@include gridColRow(col-5, col-7, row-5, row-7);
 		/* autoprefixer: off */
 	}
 	div.showcase-bg-box-2 {
 		@include wh(normal, 200px, 210px);
-		grid-column: [col-6] / [col-8];
-		grid-row: [row-8] / [row-10];
+		@include gridColRow(col-6, col-8, row-8, row-10);
 		/* autoprefixer: off */
 	}
 	div.showcase-bg-box-3 {
 		@include wh(normal, 200px, 200px);
-		grid-column: [col-8] / [col-10];
-		grid-row: [row-5] / [row-7];
+		@include gridColRow(col-8, col-10, row-5, row-7);
 		/* autoprefixer: off */
 	}
 }
