@@ -46,15 +46,15 @@ module.exports = {
 		app: './src/js/app.js',
 		bootstrap: bootstrapConfig
 	},
+	output: {
+		path: path.resolve(__dirname, "doc"),
+		filename: './js/[name].bundle.js'
+	},
 	stats: { //optional settings
 		children: false,
 		assets: false,
 		chunks: false,
 		timings: true,
-	},
-	output: {
-		path: path.resolve(__dirname, "dist"),
-		filename: './js/[name].bundle.js'
 	},
 	module: {
 		rules: [
@@ -65,24 +65,24 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				use: "babel-loader"
+				loader: "babel-loader"
 			},
 			{
 				test: /\.(jpe?g|png|gif)$/i,
 				use: [
-						'file-loader?name=img/[name].[ext]',
-						'image-webpack-loader'
-					// {
-					// 		loader: 'file-loader',
-					// 		options: {
-					// 			name: '[name].[ext]',
-					// 			publicPath: '../',
-					// 			outputPath: 'img/'
-					// 		}
-					// },
-					// {
-					// 	loader: "image-webpack-loader"
-					// }
+						// 'file-loader?name=img/[name].[ext]',
+						// 'image-webpack-loader'
+					{
+							loader: 'file-loader',
+							options: {
+								name: '[name].[ext]',
+								publicPath: '../',
+								outputPath: 'img/'
+							}
+					},
+					{
+						loader: "image-webpack-loader"
+					}
 				]
 			},
 			{
@@ -91,7 +91,17 @@ module.exports = {
 			},
     	{
 				test: /\.(ttf|eot)$/,
-				loader: 'file-loader?name=fonts/[name].[ext]'
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]',
+							publicPath: '../',
+							outputPath: 'fonts/'
+						}
+					}
+				]
+				// loader: 'file-loader?name=./fonts/[name].[ext]'
 			},
 			{
 				test:/bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,
@@ -110,9 +120,9 @@ module.exports = {
 		// new webpack.HotModuleReplacementPlugin(),
 		// new webpack.NamedModulesPlugin(),
 		new HtmlWebpackPlugin({
-			title: 'HTML Webpack Templete',
+			title: 'Shoes Web',
 			template: './src/index.html',
-			hash: true,
+			hash: false,
 			minify: {
 				collapseWhitespace: false
 			}

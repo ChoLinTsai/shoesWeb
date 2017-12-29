@@ -1,3 +1,5 @@
+
+/* width and height shorthand */
 @mixin wh($type, $width, $height) {
 	@if $type == "max" {
 		max-width: $width;
@@ -11,12 +13,21 @@
 	}
 }
 
+/* for testing layout */
 @mixin bdr($line, $color) {
 	border: $line solid $color;
 }
 
+/* grid layout col and row shorthand */
+@mixin gridColRow($colStart,$colEnd,$rowStart,$rowEnd) {
+	grid-column: [$colStart] / [$colEnd];
+	grid-row: [$rowStart] / [$rowEnd];
+}
 
-@mixin gridColRow($colStart, $colEnd, $rowStart, $rowEnd) {
-	grid-column: [col-$colStart] / [col-$colEnd];
-	grid-row: [row-$rowStart] / [row-$rowEnd];
+/* for background properties */
+@mixin bgimg($url, $repeat, $positionX, $positionY, $size) {
+	background-image: url($url);
+	background-repeat: $repeat;
+	background-position: $positionX $positionY;
+	background-size: $size;
 }

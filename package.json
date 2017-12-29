@@ -1,12 +1,12 @@
 {
-  "name": "webpackTemplate",
+  "name": "shoesWeb",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",
     "prod": "npm run clean && NODE_ENV=production webpack -p",
-    "clean": "rimraf ./dist/*"
+    "clean": "rimraf ./dist/* && rimraf ./doc/*"
   },
   "keywords": [],
   "author": "Max Tsai",

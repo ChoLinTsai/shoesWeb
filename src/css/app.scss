@@ -22,3 +22,8 @@
 
 /* import article section style */
 @import "./partials/article.scss";
+@import "./partials/mediaquery/mq_article.scss";
+
+/* import footer section style */
+@import "./partials/footer.scss";
+@import "./partials/mediaquery/mq_footer.scss";

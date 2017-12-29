@@ -74,19 +74,46 @@ $ipadProMinHeight: 450px;
 			@include wh(min, 100%, 400px);
 			order: 1;
 		}
+		.slide-in {
+			visibility: hidden;
+			transition: all 0.45s ease-out;
+		}
+
+		.align-out.slide-in{
+			transform: translateY(0%);
+		}
+
+		.slide-in {
+			visibility: visible;
+			transition: all 0.35s ease-in;
+			transform: translateY(100%);
+		}
 	}
+
+
+@media screen and (max-width: 400px) {
+	header#header-container {
+		section#header-left {
+			h1 {
+				font-size: 3.5rem;
+			}
+		}
+	}
+}
+	.slide-in {
+		visibility: hidden;
+		transition: all 0.45s ease-out;
+	}
+
+
+	.align-out.slide-in{
+		transform: translateY(0%);
+	}
+
 
 	.slide-in {
-		z-index: -1;
-		transition: 0.45s ease;
-		transform:translateX(0%);
-	}
-
-	.hiden {
-		visibility: hidden;
-	}
-
-	.slide-in.active {
+		visibility: visible;
+		transition: all 0.35s ease-in;
 		transform: translateY(100%);
-	 }
+	}
 }
