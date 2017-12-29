@@ -49,11 +49,12 @@ module.exports = {
 	stats: { //optional settings
 		children: false,
 		assets: false,
-		chunks: false,
+		chunks: true,
 		timings: true,
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
+		path: path.resolve(__dirname, "doc"),
 		filename: './js/[name].bundle.js'
 	},
 	module: {
@@ -70,19 +71,19 @@ module.exports = {
 			{
 				test: /\.(jpe?g|png|gif)$/i,
 				use: [
-						'file-loader?name=img/[name].[ext]',
-						'image-webpack-loader'
-					// {
-					// 		loader: 'file-loader',
-					// 		options: {
-					// 			name: '[name].[ext]',
-					// 			publicPath: '../',
-					// 			outputPath: 'img/'
-					// 		}
-					// },
-					// {
-					// 	loader: "image-webpack-loader"
-					// }
+						// 'file-loader?name=img/[name].[ext]',
+						// 'image-webpack-loader'
+					{
+							loader: 'file-loader',
+							options: {
+								name: '[name].[ext]',
+								publicPath: '../',
+								outputPath: 'img/'
+							}
+					},
+					{
+						loader: "image-webpack-loader"
+					}
 				]
 			},
 			{
@@ -91,7 +92,17 @@ module.exports = {
 			},
     	{
 				test: /\.(ttf|eot)$/,
-				loader: 'file-loader?name=fonts/[name].[ext]'
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]',
+							publicPath: '../',
+							outputPath: 'fonts/'
+						}
+					}
+				]
+				// loader: 'file-loader?name=./fonts/[name].[ext]'
 			},
 			{
 				test:/bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,

@@ -1,0 +1,21 @@
+/* for mobile devices */
+@media screen and (max-width: 767px) {
+	footer#footer-container {
+		min-width: 100%;
+		height: 850px;
+		display: flex;
+		flex-direction: column;
+		div#footer-logo {
+			order: 3;
+		}
+		ul#footer-info {
+			margin: 0;
+			padding-top: 2rem;
+			order: 1;
+		}
+		div#footer-inputs {
+			justify-content: center;
+			order: 2;
+		}
+	}
+}

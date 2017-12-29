@@ -6,10 +6,8 @@ article#article-container {
 	grid-template-columns: [col-1] 1rem [col-2] 1fr [col-3] 1fr [col-4] 1fr [col-5] 1fr [col-6] 1fr [col-7] 1fr [col-8] 1fr [col-9] 1fr [col-10] 1fr [col-11] 1rem [col-12];
 	grid-template-rows: [row-1] 3rem [row-2] 1fr [row-3] 1fr [row-4] 1fr [row-5] 1fr [row-6] 1fr [row-7] 1fr [row-8] 1fr [row-9] 1fr [row-10] 1fr [row-11] 1rem [row-12];
 	div#showcase-1 {
-		background-image: url('../img/article-model-1.jpg');
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
+		@include bgimg("../img/article-model-1.jpg",
+		no-repeat, center, center, cover);
 		@include wh(normal, 180px, 275px);
 		@include gridColRow(col-6, col-8, row-2,row-6);
 		/* autoprefixer: off */
@@ -17,20 +15,16 @@ article#article-container {
 		filter: grayscale(15%);
 	}
 	div#showcase-2 {
-		background-image: url('../img/article-model-2.jpg');
-		background-repeat: no-repeat;
-		background-position: center bottom;
-		background-size: cover;
+		@include bgimg("../img/article-model-2.jpg",
+		no-repeat, center, bottom, cover);
 		@include wh(normal, 350px, 175px);
 		@include gridColRow(col-3, col-7, row-6, row-8);
 		/* autoprefixer: off */
 		z-index: 1;
 	}
 	div#showcase-3 {
-		background-image: url('../img/article-model-3.jpg');
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
+		@include bgimg("../img/article-model-3.jpg",
+		no-repeat, center, center, cover);
 		@include wh(normal, 200px, 300px);
 		@include gridColRow(col-7, col-9, row-6, row-10);
 		/* autoprefixer: off */

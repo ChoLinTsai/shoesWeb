@@ -18,9 +18,16 @@
 	border: $line solid $color;
 }
 
-
 /* grid layout col and row shorthand */
 @mixin gridColRow($colStart,$colEnd,$rowStart,$rowEnd) {
 	grid-column: [$colStart] / [$colEnd];
 	grid-row: [$rowStart] / [$rowEnd];
+}
+
+/* for background properties */
+@mixin bgimg($url, $repeat, $positionX, $positionY, $size) {
+	background-image: url($url);
+	background-repeat: $repeat;
+	background-position: $positionX $positionY;
+	background-size: $size;
 }
