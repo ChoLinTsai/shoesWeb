@@ -47,7 +47,7 @@ module.exports = {
 		bootstrap: bootstrapConfig
 	},
 	output: {
-		path: path.resolve(__dirname, "doc"),
+		path: path.resolve(__dirname, "docs"),
 		filename: './js/[name].bundle.js'
 	},
 	stats: { //optional settings
