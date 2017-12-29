@@ -46,16 +46,15 @@ module.exports = {
 		app: './src/js/app.js',
 		bootstrap: bootstrapConfig
 	},
+	output: {
+		path: path.resolve(__dirname, "doc"),
+		filename: './js/[name].bundle.js'
+	},
 	stats: { //optional settings
 		children: false,
 		assets: false,
-		chunks: true,
+		chunks: false,
 		timings: true,
-	},
-	output: {
-		path: path.resolve(__dirname, "dist"),
-		path: path.resolve(__dirname, "doc"),
-		filename: './js/[name].bundle.js'
 	},
 	module: {
 		rules: [
@@ -66,7 +65,7 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				use: "babel-loader"
+				loader: "babel-loader"
 			},
 			{
 				test: /\.(jpe?g|png|gif)$/i,
@@ -121,9 +120,9 @@ module.exports = {
 		// new webpack.HotModuleReplacementPlugin(),
 		// new webpack.NamedModulesPlugin(),
 		new HtmlWebpackPlugin({
-			title: 'HTML Webpack Templete',
+			title: 'Shoes Web',
 			template: './src/index.html',
-			hash: true,
+			hash: false,
 			minify: {
 				collapseWhitespace: false
 			}

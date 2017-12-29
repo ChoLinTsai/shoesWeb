@@ -27,13 +27,13 @@ div#master-container {
   max-width: 900px;
   min-height: 100vh;
   position: relative;
-  margin: 0 auto;
-  top: 5rem;
+  margin: 5rem auto 2rem;
   box-shadow: 2px 2px 200px #222831;
 }
 
 @media screen and (max-width:1366px) {
   div#master-container {
+    margin: 0 auto;
     min-width: 100%;
     min-height: 100vh;
     position: relative;
@@ -69,6 +69,7 @@ div#master-container {
 header#header-container {
   min-width: 100%;
   height: 400px;
+  overflow: hidden;
   position: relative;
   display: -ms-grid;
   display: grid;
@@ -170,14 +171,20 @@ header#header-container section#header-left a#btn-view:hover {
 }
 
 .slide-in {
-  z-index: -1;
-  transition: .45s ease;
+  visibility: hidden;
+  transition: all .45s ease-out;
+}
+
+.align-out.slide-in {
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.hiden {
-  visibility: hidden;
+.slide-in {
+  visibility: visible;
+  transition: all .35s ease;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
 }
 
 @media screen and (max-width:1366px) and (min-width:1025px) {
@@ -271,15 +278,46 @@ header#header-container section#header-left a#btn-view:hover {
     order: 1;
   }
 
-  .slide-in {
-    z-index: -1;
-    transition: .45s ease;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+  header#header-container .slide-in {
+    visibility: hidden;
+    transition: all .45s ease-out;
   }
 
-  .hiden {
+  header#header-container .align-out.slide-in {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  header#header-container .slide-in {
+    visibility: visible;
+    transition: all .35s ease-in;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@media screen and (max-width:680px) and (max-width:400px) {
+  header#header-container section#header-left h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width:680px) {
+  .slide-in {
     visibility: hidden;
+    transition: all .45s ease-out;
+  }
+
+  .align-out.slide-in {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  .slide-in {
+    visibility: visible;
+    transition: all .35s ease-in;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
   }
 }
 
@@ -889,6 +927,12 @@ footer#footer-container div#footer-inputs a#signup:hover {
   cursor: pointer;
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
+}
+
+@media screen and (max-width:1366px) and (min-width:768px) {
+  ul#footer-info {
+    margin: 0;
+  }
 }
 
 @media screen and (max-width:767px) {
