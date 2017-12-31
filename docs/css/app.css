@@ -170,12 +170,9 @@ header#header-container section#header-left a#btn-view:hover {
   color: #fff;
 }
 
-.slide-in {
+.align-out.slide-in {
   visibility: hidden;
   transition: all .45s ease-out;
-}
-
-.align-out.slide-in {
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
 }
@@ -278,12 +275,9 @@ header#header-container section#header-left a#btn-view:hover {
     order: 1;
   }
 
-  header#header-container .slide-in {
+  header#header-container .align-out.slide-in {
     visibility: hidden;
     transition: all .45s ease-out;
-  }
-
-  header#header-container .align-out.slide-in {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
@@ -680,6 +674,7 @@ article#article-container div#showcase-3 {
 
 article#article-container div.showcase-bg-box {
   background: #a1d9ff;
+  opacity: .25;
   z-index: 0;
 }
 

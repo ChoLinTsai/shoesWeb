@@ -74,12 +74,10 @@ $ipadProMinHeight: 450px;
 			@include wh(min, 100%, 400px);
 			order: 1;
 		}
-		.slide-in {
-			visibility: hidden;
-			transition: all 0.45s ease-out;
-		}
 
 		.align-out.slide-in{
+			visibility: hidden;
+			transition: all 0.45s ease-out;
 			transform: translateY(0%);
 		}
 

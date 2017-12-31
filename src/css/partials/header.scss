@@ -83,13 +83,9 @@ header#header-container {
 	}
 }
 
-.slide-in {
+.align-out.slide-in{
 	visibility: hidden;
 	transition: all 0.45s ease-out;
-}
-
-
-.align-out.slide-in{
 	transform: translateX(100%);
 }
 
