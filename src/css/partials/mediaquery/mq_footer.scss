@@ -4,8 +4,6 @@
 		margin: 0;
 	}
 }
-
-
 /* for mobile devices */
 @media screen and (max-width: 767px) {
 	footer#footer-container {
@@ -13,14 +11,17 @@
 		height: 850px;
 		display: flex;
 		flex-direction: column;
+
 		div#footer-logo {
 			order: 3;
 		}
+
 		ul#footer-info {
 			margin: 0;
 			padding-top: 2rem;
 			order: 1;
 		}
+
 		div#footer-inputs {
 			justify-content: center;
 			order: 2;

@@ -5,7 +5,6 @@
 		height: 250px;
 	}
 }
-
 /* for mobile devices */
 @media screen and (max-width: 500px) {
 	aside#aside-container {
@@ -14,15 +13,19 @@
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
+
 		div#aside-pic-1 {
 			@include wh(normal, 50%, 50%);
 		}
+
 		div#aside-pic-2 {
 			@include wh(normal, 50%, 50%);
 		}
+
 		div#aside-pic-3 {
 			@include wh(normal, 50%, 50%);
 		}
+
 		div#aside-pic-4 {
 			@include wh(normal, 50%, 50%);
 		}
