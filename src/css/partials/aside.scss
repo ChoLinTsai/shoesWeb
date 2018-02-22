@@ -3,34 +3,35 @@ aside#aside-container {
 	min-width: 100%;
 	height: 150px;
 	display: grid;
-	grid-template-columns:
-		[aside-left-1] 1fr [aside-left-2] 1fr
-		[aside-center] 1fr [aside-right-2] 1fr
-		[aside-right-1];
+	grid-template-columns: [aside-left-1] 1fr [aside-left-2] 1fr [aside-center] 1fr [aside-right-2] 1fr [aside-right-1];
+
 	div#aside-pic-1 {
 		grid-column: [aside-left-1] / [aside-left-2];
-		background-image: url('../img/aside-pic-1.jpg');
+		background-image: url("../img/aside-pic-1.jpg");
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
 	}
+
 	div#aside-pic-2 {
 		grid-column: [aside-left-2] / [aside-center];
-		background-image: url('../img/aside-pic-2.jpg');
+		background-image: url("../img/aside-pic-2.jpg");
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
 	}
+
 	div#aside-pic-3 {
 		grid-column: [aside-center] / [aside-right-2];
-		background-image: url('../img/aside-pic-3.jpg');
+		background-image: url("../img/aside-pic-3.jpg");
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
 	}
+
 	div#aside-pic-4 {
 		grid-column: [aside-right-2] / [aside-right-1];
-		background-image: url('../img/aside-pic-4.jpg');
+		background-image: url("../img/aside-pic-4.jpg");
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;

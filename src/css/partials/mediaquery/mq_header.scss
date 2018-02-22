@@ -1,48 +1,53 @@
 /* for ipad pro */
 $ipadProMinHeight: 450px;
-
 @media screen and (max-width: 1366px) and (min-width: 1025px) {
 	header#header-container {
 		min-width: 100%;
 		min-height: $ipadProMinHeight;
+
 		section#header-left {
 			min-width: 50%;
 			min-height: $ipadProMinHeight;
 			justify-content: space-around;
+
 			img#header-shoe {
 				width: 250px;
 				height: 250px;
 			}
+
 			div#header-view-shoe {
 				min-width: 50%;
 				min-height: $ipadProMinHeight;
 			}
+
 			p {
 				padding: 0 50px;
 			}
 		}
+
 		section#header-right {
 			min-width: 50%;
 		}
 	}
 }
-
 /* for ipad */
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
 	header#header-container {
 		min-width: 100%;
+
 		section#header-left {
 			min-width: 50%;
+
 			div#header-view-shoe {
 				min-width: 50%;
 			}
 		}
+
 		section#header-right {
 			min-width: 50%;
 		}
 	}
 }
-
 /* for mobile devices */
 @media screen and (max-width: 680px) {
 	header#header-container {
@@ -50,32 +55,36 @@ $ipadProMinHeight: 450px;
 		height: 800px;
 		display: flex;
 		flex-direction: column;
+
 		section#header-left {
 			order: 2;
 			@include wh(min, 100%, 400px);
 			justify-content: space-around;
+
 			div#header-view-shoe {
 				@include wh(normal, 100%, 400px);
 				position: absolute;
 				top: 0;
 				left: 0;
-				background-image: url('../img/header-shoe.jpg');
+				background-image: url("../img/header-shoe.jpg");
 				background-repeat: no-repeat;
 				background-position: center center;
 				background-size: cover;
 				z-index: 1;
 			}
+
 			a#btn-view {
 				width: 250px;
 				padding: 5px;
 			}
 		}
+
 		section#header-right {
 			@include wh(min, 100%, 400px);
 			order: 1;
 		}
 
-		.align-out.slide-in{
+		.align-out.slide-in {
 			visibility: hidden;
 			transition: all 0.45s ease-out;
 			transform: translateY(0%);
@@ -87,27 +96,24 @@ $ipadProMinHeight: 450px;
 			transform: translateY(100%);
 		}
 	}
-
-
-@media screen and (max-width: 400px) {
-	header#header-container {
-		section#header-left {
-			h1 {
-				font-size: 3.5rem;
+	@media screen and (max-width: 400px) {
+		header#header-container {
+			section#header-left {
+				h1 {
+					font-size: 3.5rem;
+				}
 			}
 		}
 	}
-}
+
 	.slide-in {
 		visibility: hidden;
 		transition: all 0.45s ease-out;
 	}
 
-
-	.align-out.slide-in{
+	.align-out.slide-in {
 		transform: translateY(0%);
 	}
-
 
 	.slide-in {
 		visibility: visible;

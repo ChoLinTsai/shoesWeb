@@ -5,17 +5,19 @@ footer#footer-container {
 	display: grid;
 	grid-template-columns: [col-1] 1fr [col-2] 1fr [col-3] 1.5fr [col-4];
 	grid-template-rows: [row-1] 1fr [row-2];
+
 	div#footer-logo {
 		@include wh(normal, 100%, 100%);
-		@include bgimg("../img/footer-logo.jpg",
-		no-repeat, center, center, cover);
+		@include bgimg("../img/footer-logo.jpg", no-repeat, center, center, cover);
 	}
+
 	ul#footer-info {
 		@include wh(normal, 100%, 100%);
 		background: #333;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
+
 		li {
 			list-style-type: none;
 			color: #FAFAFA;
@@ -23,6 +25,7 @@ footer#footer-container {
 			font-family: 'roboto-medium';
 		}
 	}
+
 	div#footer-inputs {
 		@include wh(normal, 100%, 100%);
 		background: #333;
@@ -30,15 +33,18 @@ footer#footer-container {
 		flex-direction: column;
 		justify-content: flex-end;
 		padding: 2rem;
+
 		h4 {
 			color: #fafafa;
 			text-transform: uppercase;
 		}
+
 		input {
 			margin-top: 1rem;
 			height: 4rem;
 			text-align: center;
 		}
+
 		a#signup {
 			margin-top: 2rem;
 			width: 100%;
@@ -52,7 +58,8 @@ footer#footer-container {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			transition: all .2s ease-out;
+			transition: all 0.2s ease-out;
+
 			&:hover {
 				cursor: pointer;
 				transform: scale(1.05);

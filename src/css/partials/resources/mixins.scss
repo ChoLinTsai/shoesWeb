@@ -1,29 +1,27 @@
-
 /* width and height shorthand */
 @mixin wh($type, $width, $height) {
 	@if $type == "max" {
 		max-width: $width;
 		max-height: $height;
-	} @else if $type == "min" {
+	} @else
+	if $type == "min" {
 		min-width: $width;
 		min-height: $height;
-	} @else if $type == "normal"{
+	} @else
+	if $type == "normal" {
 		width: $width;
 		height: $height;
 	}
 }
-
 /* for testing layout */
 @mixin bdr($line, $color) {
 	border: $line solid $color;
 }
-
 /* grid layout col and row shorthand */
 @mixin gridColRow($colStart,$colEnd,$rowStart,$rowEnd) {
 	grid-column: [$colStart] / [$colEnd];
 	grid-row: [$rowStart] / [$rowEnd];
 }
-
 /* for background properties */
 @mixin bgimg($url, $repeat, $positionX, $positionY, $size) {
 	background-image: url($url);
