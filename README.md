@@ -1,15 +1,5 @@
-HTML  
-CSS  
-Sass  
-Boostrap3  
-Purifycss  
-Javascript  
-jQuery
-Babel-env  
-Webpack-dev-server  
-Rimraf  
-File-loader  
-Image-webpack-loader  
+## 2018/3/2
 
-Optional:  
-Hot Module Replacement  
+Some basic HTML/CSS practice, nothing fancy.
+
+ 
